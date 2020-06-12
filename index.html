@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="img/icon.png" type="image/gif" sizes="16x16">
+	<title>Animal Description - Metode Pembelajaran Terbaik Dalam Mengenal Hewan</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	 <!-- Bootstrap core CSS -->
+  	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  	<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  	<link href="css/clean-blog.min.css" rel="stylesheet">
+</head>
+<body>
+	<header class="masthead" style="background-image: url('img/animal.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Animal Description</h1>
+            <span class="subheading">
+            Metode Pembelajaran Terbaik Dalam Mengenal Hewan Bagi Anak
+            </span>
+            <p class="subheading">By Esa Gautama</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+  	<h1 style="text-align: center;color: #2ecc71;">Keunggulan</h1><hr>
+  	<div class="row">
+	  	<div class="col-sm-4 col-lg-4 col-md-4 col-lg-offset-3">
+	  		<div class="box" style="text-align: center;">
+	  			<img src="img/icon1.png" height="150" width="150">
+	  		</div>
+	  		<h4 style="text-align: center;">Mudah Dimengerti</h4>
+	  	</div>
+	  	<div class="col-sm-4 col-lg-4 col-md-4 col-md-offset-3">
+	  		<div class="box" style="text-align: center;">
+	  			<img src="img/icon2.png" height="150" width="150">
+	  		</div>
+	  		<h4 style="text-align: center;">Penjelasan Rapi</h4>
+	  	</div>
+	  	<div class="col-sm-4 col-lg-4 col-md-4 col-md-offset-3">
+	  		<div class="box" style="text-align: center;">
+	  			<img src="img/icon3.png" height="150" width="150">
+	  		</div>
+	  		<h4 style="text-align: center;">Menambah Pengetahuan</h4>
+	  	</div>
+    </div><hr>
+  </div>
+  <div class="box-content" style="background-color: #2ecc71; color: white; padding: 15px;">
+  	<div class="container">
+	  <h1 style="text-align: center; padding: ">Descripsi Aplikasi</h1>
+	  <p style="text-align: center;">Aplikasi ini diperuntukan untuk anak-anak yang ingin mengenal hewan khususnya pada metode perkembangbiakan ataupun klasifikasi makanan dari hewan tersebut. Orangtua tentunya dapat membimbing anaknya agar sang anak lebih paham lagi dan juga untuk melatih pendekatan antara orangtua dan anak. Aplikasi ini pula cocok untuk anak diusia 10 tahun keatas dan memiliki minat dalam dunia hewan.</p>
+	</div>  
+  </div><br><br>	<br>	
+  <div class="container">
+  	<h2>Penjelasan</h2>
+  	<div class="row">
+  		<div class="col-sm-6 col-lg-6 col-md-6">
+  			<h4>Jenis Makanan:</h4>
+  			<ul>
+  				<li>Karnivora: Pemakan Daging</li>
+  				<li>Herbivora: Pemakan Dedaunan/Rumput</li>
+  				<li>Omnivora: Pemakan Segala Makanan</li>
+  				<li>Frugivora: Pemakan Buah</li>
+  			</ul>
+  		</div>
+  		<div class="col-sm-6 col-lg-6 col-md-6">
+  			<h4>Cara Berkembangbiak:</h4>
+  			<ul>
+  				<li>Ovipar: Dengan Cara Bertelur</li>
+  				<li>Vivipar: Dengan Cara Melahirkan</li>
+  				<li>Ovovivipar: Hewan ini akan bertelur di dalam kandungannya lalu setelah menetas anaknya akan lahir dari dalam perut induknya</li>
+  			</ul>	
+  		</div>
+  	</div><hr>	
+  </div><br>	<br>	
+  <div class="container">
+	<h2 style="color: #2ecc71;">Uji Coba Program</h2>
+	<div class="row">
+		<div class="col-sm-12 col-lg-5 col-md-5">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Masukan Nama Hewan...">	
+			</div>
+		</div>
+	</div>
+	<button class="btn btn-success">Submit</button>
+	<!-- <button id="delete" class="btn btn-danger">Delete</button> -->
+	<br><hr>
+	<h4 style="text-align: center; color: #2ecc71;">Hasil</h4>
+	<ul id="penjelasan" type="none"></ul>
+
+	<script src="https://unpkg.com/brain.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+	<script>
+		$(document).ready(function (){
+			const network = new brain.recurrent.LSTM();
+
+			const emailData = [{
+				"subject": "Anjing",
+				"type": "Karnivora (Vivipar)"
+			},
+			{
+				"subject": "Kucing",
+				"type": "Karnivora (Vivipar)"
+			},
+			{
+				"subject": "Ular",
+				"type": "Karnivora (Ovovivipar)"
+			},
+			{
+				"subject": "Sapi",
+				"type": "Herbivora (Vivipar)"
+			},
+			{
+				"subject": "Kambing",
+				"type": "Herbivora (Vivipar)"
+			},
+			{
+				"subject": "Ayam",
+				"type": "Omnivora (Ovipar)"
+			},
+			{
+				"subject": "Cicak",
+				"type": "Insectivora (Ovipar)"
+			},
+			{
+				"subject": "Buaya",
+				"type": "Karnivora (Ovipar)"
+			},
+			{
+				"subject": "Kelelawar",
+				"type": "Frugivora (Ovipar)"
+			},
+		]
+
+		const trainingData = emailData.map(email => ({
+			input: email.subject,
+			output: email.type,
+		}))
+		network.train(trainingData, {
+			iterations: 2000, 
+			log: (stats) => {
+				console.log(stats)
+			}
+		});
+
+		$('button').on('click', function (e) {
+			var inputValue = $('input').val();
+			const result = network.run(inputValue);
+			console.log(result);
+			$('#penjelasan').append('<li>' + result + '</li>');
+		})
+		})
+		// $(document).ready(function(){
+		// $("#delete").click(function(){
+		// 	$("ul").remove();
+		// })
+		// })
+	</script>
+
+
+ 	</div><br>
+ 	<p style="padding: 15px; background-color: #2ecc71; text-align: center; color: white; margin: 0;">Copyright &copy Esa Gautama</p>
+</body>
+</html>
